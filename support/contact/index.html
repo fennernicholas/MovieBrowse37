@@ -1,18 +1,44 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="../../theme.css">
-		<script src="contact.js" defer></script>
-	</head>
-	<body>
-		<h1>Contact us</h1>
-		<div class="formContainer">
-			<form id="contactForm">
-				<input type="email" placeholder="Email">
-				<br>
-				<textarea rows="16" cols="60"></textarea>
-				<br>
-				<input type="submit">
-			</form>
-		</div>
-	</body>
+
+<head>
+    <title>Support Page</title>
+</head>
+
+<body>
+    <h1 style="text-align: center">Contact Us</h1>
+    
+    <div style="background-color:rgb(200, 200, 200);color:rgb(0, 0, 0);padding: 10px">
+        <h3>Email us</h3>
+        <form>
+            First name: <br>
+            <input type="text" name="firstname"><br><br>
+            Last name: <br>
+            <input type="text" name="lastname"><br><br>
+            E-mail address: <br>
+            <input type="text" name="email"><br><br>
+            E-mail address Confirmation: <br>
+            <input type="text" name="cEmail"><br><br>
+            Type of question: <br>
+            <select name="qType">
+                <option value></option>
+                <option value="1">Payment</option>
+                <option value="2">Technical</option>
+                <option value="3">Account</option>
+                <option value="4">Other</option>
+            </select><br><br>
+            Your comment: <br>
+            <textarea name="customerComment" cols="60" rows="10"></textarea><br><br>
+            <p style="color:brown">[Confirmation email will be sent autometically as a reference after you click the submit button.]</p>
+            <input type="submit">
+        </form>
+    </div>
+    <div style="background-color:rgb(180, 180, 180);color:rgb(0, 0, 0);padding: 10px">
+        <h3>Call & Chat</h3><br>
+        <p><b>Call us now:</b><br>24 hours hotline: 1-222-333-4444</p><br>
+        <p><b>Chat now:</b><br> Working hours: 09:00 - 18:00<br>Click the following button to start the converation with our agent:</p>
+        <button>Live Chat</button>
+    </div>
+</body>
+
 </html>
