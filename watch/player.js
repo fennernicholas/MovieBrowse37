@@ -73,6 +73,27 @@ vid.addEventListener("ended",
 	}
 );
 
+document.getElementById("settingsContainer").addEventListener("focusin",
+	function(e) {
+		var drop = document.getElementById("settingsDropdown");
+
+		drop.classList.add("settingsDropdownFocus");
+	}
+);
+
+document.getElementById("settingsContainer").addEventListener("focusout",
+	function(e) {
+		var drop = document.getElementById("settingsDropdown");
+
+		if (
+			!document.getElementById("settingsContainer")
+			.contains(e.relatedTarget)
+		) {
+			drop.classList.remove("settingsDropdownFocus");
+		}
+	}
+);
+
 function progressUpdate() {
 	var ranges = vid.buffered;
 	var load = document.getElementById("progressLoad");
@@ -93,7 +114,6 @@ function progressUpdate() {
 					100.0 * bar.clientWidth *
 					(ranges.end(i) - ranges.start(i)) / vid.duration
 				) + "%";
-			console.log(ranges.length);
 		}
 	}
 }
